@@ -1,0 +1,15 @@
+# bili
+*.exe
+*.html
+/Language
+/icon
+/webuihtml
+
+# my favorite UP
+urls_private.txt
+
+# cookie file
+cookies.json
+
+# downloaded video files
+/Download
