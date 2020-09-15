@@ -2,8 +2,8 @@ import sys
 import os
 from urllib import error
 
-work_path = r"D:\Program Files\bili_1.2.6.36"
-storage_path = r"C:\Users\xuzik\OneDrive - mail.ustc.edu.cn\Backup\bilibili\C4\Live\\"
+work_path = "D:\Program Files\bili_1.2.6.36"
+storage_path = "C:\Users\xuzik\OneDrive - mail.ustc.edu.cn\Backup\bilibili\C4\Live\\"
 
 
 def main(fill=""):
@@ -12,7 +12,7 @@ def main(fill=""):
         start_value = "start.exe"
     else:
         if os.path.exists("%s.txt" % fill):
-            start_value = r"start.exe<%s.txt" % fill
+            start_value = "start.exe<%s.txt" % fill
         else:
             print("fill file %s.txt not exist." % fill)
             return
@@ -28,7 +28,7 @@ def main(fill=""):
         flv_handle();
 
 def flv_handle():
-    os.chdir(work_path + r"\download")
+    os.chdir(work_path + "\download")
     for file in os.listdir():
         print(file)
     print("%s file(s) total." % len(os.listdir()))
@@ -41,7 +41,7 @@ def flv_handle():
             result_ffmpeg = os.system('ffmpeg -i "%s" -vcodec copy -acodec copy "%s.mp4"' % (file, filename))
             if result_ffmpeg == 0:
                 print("reverting is normally completed.")
-                result_copy_del = os.system(r'cp "%s.mp4" "%s" && del "%s" && del "%s.mp4"' % (filename, storage_path, file, filename))
+                result_copy_del = os.system('cp "%s.mp4" "%s" && del "%s" && del "%s.mp4"' % (filename, storage_path, file, filename))
                 flv_files_success.append(file)
             else:
                 print("reverting is failed. something must happened.")
