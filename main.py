@@ -1,9 +1,8 @@
 import sys
 import os
-from urllib import error
 
-work_path = "D:\Program Files\bili_1.2.6.36"
-storage_path = "C:\Users\xuzik\OneDrive - mail.ustc.edu.cn\Backup\bilibili\C4\Live\\"
+work_path = r"D:\Program Files\bili_1.2.6.36"
+storage_path = r"C:\Users\xuzik\OneDrive - mail.ustc.edu.cn\Backup\bilibili\C4\Live\\"
 
 
 def main(fill=""):
