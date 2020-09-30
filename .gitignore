@@ -1,4 +1,4 @@
-# bili
+# original bili
 *.exe
 *.html
 /Language
@@ -13,3 +13,6 @@ cookies.json
 
 # downloaded video files
 /Download
+
+# log
+log.log
