@@ -4,8 +4,7 @@ import time
 
 
 work_path = r"D:\Program Files\bili_1.2.6.36"
-storage_path = r"C:\Users\xuzik\OneDrive - \
-    mail.ustc.edu.cn\Backup\bilibili\C4\Live\\"
+storage_path = r"C:\Users\xuzik\OneDrive - mail.ustc.edu.cn\Backup\bilibili\C4\Live\\"
 
 
 def log(text):
@@ -51,7 +50,7 @@ def flv_handle():
                 % (file, filename))
             if result_ffmpeg == 0:
                 log("reverting is normally completed.")
-                result_copy_del = os.system('cp "%s.mp4" "%s" && del "%s" && del "%s.mp4"'
+                os.system('cp "%s.mp4" "%s" && del "%s" && del "%s.mp4"'
                     % (filename, storage_path, file, filename))
                 flv_files_success.append(file)
             else:
